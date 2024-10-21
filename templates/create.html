@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Flashcard</title>
+    <link rel="stylesheet" href="stle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">FlashLearn</div>
+                <ul class="nav-links">
+                    <li><a href="/flashcard-app/templates/index.html">Home</a></li>
+                    <li><a href="/create">Create Flashcard</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="create-section">
+        <div class="container">
+            <h2>Create New Flashcard</h2>
+            <form action="/create" method="POST" class="create-form">
+                <div class="form-group">
+                    <label for="word">Word</label>
+                    <input type="text" id="word" name="word" required>
+                </div>
+                <div class="form-group">
+                    <label for="translation">Translation</label>
+                    <input type="text" id="translation" name="translation" required>
+                </div>
+                <div class="form-group">
+                    <label for="level">Level</label>
+                    <select id="level" name="level">
+                        <option value="basic">Basic</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="theme">Theme</label>
+                    <input type="text" id="theme" name="theme">
+                </div>
+                <button type="submit" class="btn-primary">Create Flashcard</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FlashLearn. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
